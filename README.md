@@ -1,8 +1,6 @@
 # HAStringPickerView
 
-[![CI Status](https://img.shields.io/travis/HandsAppTeam/HAStringPickerView.svg?style=flat)](https://travis-ci.org/HandsAppTeam/HAStringPickerView)
 [![Version](https://img.shields.io/cocoapods/v/HAStringPickerView.svg?style=flat)](https://cocoapods.org/pods/HAStringPickerView)
-[![License](https://img.shields.io/cocoapods/l/HAStringPickerView.svg?style=flat)](https://cocoapods.org/pods/HAStringPickerView)
 [![Platform](https://img.shields.io/cocoapods/p/HAStringPickerView.svg?style=flat)](https://cocoapods.org/pods/HAStringPickerView)
 
 ## Example
@@ -22,7 +20,7 @@ pod 'HAStringPickerView'
 
 ## Author
 
-HandsAppTeam, 6nike6@bk.ru
+Nikita Krasavin, nikita_krasavin@bk.ru
 
 ## License
 
