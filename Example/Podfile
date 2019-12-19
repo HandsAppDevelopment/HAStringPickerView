@@ -1,0 +1,6 @@
+use_frameworks!
+target 'HAStringPickerView_Tests' do
+  pod 'HAStringPickerView', :path => '../'
+  
+  
+end
