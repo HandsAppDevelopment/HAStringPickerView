@@ -3,14 +3,14 @@ import UIKit
 public class HAStringPickerView: UIPickerView {
 
     private(set) var items: [String]
-    private var itemSelected: ((String) -> Void)
+    private var itemSelected: ((Int, String) -> Void)
     private var textField: UITextField?
 
     public init(frame: CGRect? = nil,
          items: [String],
          selectedItemIndex: Int = 0,
          textField: UITextField? = nil,
-         itemSelected: @escaping (String) -> Void) {
+         itemSelected: @escaping (Int, String) -> Void) {
         self.items = items
         self.itemSelected = itemSelected
         self.textField = textField
@@ -45,7 +45,7 @@ extension HAStringPickerView: UIPickerViewDelegate {
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let item = items[row]
         textField?.text = item
-        itemSelected(item)
+        itemSelected(row, item)
     }
 }
 
@@ -54,6 +54,6 @@ extension HAStringPickerView: UITextFieldDelegate {
         let selectedRow = self.selectedRow(inComponent: 0)
         let item = self.items[selectedRow]
         textField.text = item
-        self.itemSelected(item)
+        self.itemSelected(selectedRow, item)
     }
 }
