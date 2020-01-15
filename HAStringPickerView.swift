@@ -6,7 +6,7 @@ public class HAStringPickerView: UIPickerView {
     private var itemSelected: ((String) -> Void)
     private var textField: UITextField?
 
-    init(frame: CGRect? = nil,
+    public init(frame: CGRect? = nil,
          items: [String],
          selectedItemIndex: Int = 0,
          textField: UITextField? = nil,
