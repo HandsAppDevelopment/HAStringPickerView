@@ -28,21 +28,21 @@ public class HAStringPickerView: UIPickerView {
 }
 
 extension HAStringPickerView: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return items.count
     }
 }
 
 extension HAStringPickerView: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return items[row]
     }
 
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let item = items[row]
         textField?.text = item
         itemSelected(item)
@@ -50,7 +50,7 @@ extension HAStringPickerView: UIPickerViewDelegate {
 }
 
 extension HAStringPickerView: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.selectedRow(inComponent: 0)
         let item = self.items[selectedRow]
         textField.text = item
