@@ -49,7 +49,7 @@ extension HAStringPickerView: UIPickerViewDelegate {
     }
 }
 
-extension StringPickerView: UITextFieldDelegate {
+extension HAStringPickerView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.selectedRow(inComponent: 0)
         let item = self.items[selectedRow]
