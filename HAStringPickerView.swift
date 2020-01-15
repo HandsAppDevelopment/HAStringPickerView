@@ -1,6 +1,6 @@
 import UIKit
 
-class StringPickerView: UIPickerView {
+public class HAStringPickerView: UIPickerView {
 
     private(set) var items: [String]
     private var itemSelected: ((String) -> Void)
@@ -27,7 +27,7 @@ class StringPickerView: UIPickerView {
     }
 }
 
-extension StringPickerView: UIPickerViewDataSource {
+extension HAStringPickerView: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -37,7 +37,7 @@ extension StringPickerView: UIPickerViewDataSource {
     }
 }
 
-extension StringPickerView: UIPickerViewDelegate {
+extension HAStringPickerView: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return items[row]
     }
